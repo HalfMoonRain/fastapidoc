@@ -7,5 +7,5 @@ async def greeting(request):
 
 
 app = Starlette(debug=True, routes=[
-    Route('/hi', greeting), 
+    Route('/hi', greeting),
 ])
