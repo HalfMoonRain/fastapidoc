@@ -13,3 +13,19 @@ def get_all() -> list[Explorer] | None :
 def get_one(name) -> Explorer | None:
     return service.get_one(name)
 
+# 나머지 앤드포인트. 현재는 아무 일도 하지 않는다.
+@router.post("/")
+def create(explorer: Explorer) -> Explorer:
+    return service.create(explorer)
+
+@router.patch("/{name}")
+def modify(name, explorer: Explorer) -> Explorer:
+    return service.modify(name, explorer)
+
+@router.put("/{name}")
+def replace(name, explorer: Explorer) -> Explorer:
+    return service.replace(name, explorer)
+
+@router.delete("/{name}")
+def delete(name: str):
+    return None
