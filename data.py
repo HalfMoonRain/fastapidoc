@@ -14,3 +14,5 @@ _creatures: list[Creature] = [
 
 def get_creatures() -> list[Creature]:
     return _creatures
+
+
