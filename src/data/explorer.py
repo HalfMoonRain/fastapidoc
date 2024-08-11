@@ -1,4 +1,4 @@
-from __init__ import curs
+from . import curs
 from model.explorer import Explorer
 
 curs.execute("""create table if not exists explorer(
@@ -48,4 +48,3 @@ def delete(explorer: Explorer) -> bool:
     params = {"name" : explorer.name}
     res = curs.execute(qry, params)
     return bool(res)
-

@@ -1,5 +1,5 @@
 from model.explorer import Explorer
-import explorer as data
+import data.explorer as data
 
 def get_all() -> list[Explorer]:
     return data.get_all()
