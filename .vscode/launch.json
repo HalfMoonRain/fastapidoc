@@ -5,11 +5,11 @@
       "name": "Python: FastAPI",
       "type": "python",
       "request": "launch",
-      "program": "${workspaceFolder}/main.py",
+      "program": "${workspaceFolder}/src/main.py",
       "console": "integratedTerminal",
       "args": ["--reload"],
       "env": {
-        "PYTHONPATH": "${workspaceFolder}"
+        "PYTHONPATH": "/Users/j_home/anaconda3/bin/python"
       }
     }
   ]
