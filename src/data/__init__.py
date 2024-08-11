@@ -1,7 +1,7 @@
 """SQLite 데이터 베이스를 초기화 한다."""
 import os
 from pathlib import Path
-from sqlite3 import connect, Connection, Cursor
+from sqlite3 import connect, Connection, Cursor, IntegrityError
 
 conn: Connection | None = None
 curs: Cursor | None = None
