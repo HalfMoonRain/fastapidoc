@@ -1,5 +1,5 @@
 from model.creature import Creature
-import service.creature as data
+import data.creature as data
 
 def get_all() -> list[Creature]:
     return data.get_all()

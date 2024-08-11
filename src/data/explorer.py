@@ -16,7 +16,7 @@ def get_one(name: str) -> Explorer:
     qry = "select * from explorer where name =:name"
     params = {"name" : name}
     curs.execute(qry, params)
-    return row_to_model(curs.fetchall())
+    return row_to_model(curs.fetchone())
 
 def get_all() -> list[Explorer] :
     qry = "select * from explorer"
@@ -36,7 +36,7 @@ def modify(name: str, explorer: Explorer) -> Explorer:
         set country = :country,
         name = :name,
         description = :description
-        where name = :name """
+        where name = :name_orig """
     params = model_to_dict(explorer)
     params["name_orig"] = explorer.name
     _ = curs.execute(qry, params)

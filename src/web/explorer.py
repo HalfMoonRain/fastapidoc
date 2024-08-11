@@ -5,6 +5,7 @@ import service.explorer as service
 
 router = APIRouter(prefix="/explorer")
 
+@router.get("")
 @router.get("/")
 def get_all() -> list[Explorer] | None :
     return service.get_all()
@@ -14,6 +15,7 @@ def get_one(name) -> Explorer | None:
     return service.get_one(name)
 
 # 나머지 앤드포인트. 현재는 아무 일도 하지 않는다.
+@router.post("")
 @router.post("/")
 def create(explorer: Explorer) -> Explorer:
     return service.create(explorer)
