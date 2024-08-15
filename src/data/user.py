@@ -7,7 +7,7 @@ curs.execute("""create table if not exists
                 user(
                     name text primary key,
                     hash text)""")
-curs.execute("""create table if ot exists
+curs.execute("""create table if not exists
                 xuser(
                     name text primary key,
                     hash text)""")
